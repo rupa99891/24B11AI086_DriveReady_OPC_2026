@@ -1,0 +1,11 @@
+question,must_include
+What is your business name?,TripWise
+What services do you provide?,domestic
+What is the budget package price?,5000
+What is the standard package price?,10000
+What is the premium package price?,20000
+What are your working hours?,9 AM
+When does your office close?,6 PM
+What is your cancellation policy?,48 hours
+Suggest a package under Rs. 8000.,budget
+Suggest a package under Rs. 15000.,standard
