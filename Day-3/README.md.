@@ -1,0 +1,83 @@
+# Day 3 - AI Travel Assistant: Prompt Testing and Evaluation
+
+## Objective
+Build an AI-powered travel assistant, evaluate its responses,
+improve the system prompt, and analyze temperature settings.
+
+## Business
+TripWise Travel Services is a demonstration travel business
+that provides domestic travel packages and customer assistance.
+
+## Technologies Used
+- Python
+- Google Colab
+- Groq API
+- LangChain
+- GPT-OSS-120B
+- CSV
+
+## Features
+- Business-specific system prompt
+- Dynamic business details using Python dictionaries
+- Automated testing with 10 customer questions
+- Keyword-based response evaluation
+- Prompt improvement and performance comparison
+- Temperature-based response analysis
+- Agent and non-agent task classification
+
+## Experimental Results
+
+| Experiment | Temperature | Passed | Pass Rate |
+|------------|-------------|--------|-----------|
+| Original Prompt | 0 | 4/10 | 40% |
+| Improved Prompt | 0 | 8/10 | 80% |
+| Run 1 | 1.0 | 9/10 | 90% |
+| Run 2 | 1.0 | 7/10 | 70% |
+
+## Prompt Improvement
+Added an instruction to preserve exact words, numerical
+values, and time formats from the business facts.
+
+The observed pass rate increased from 40% to 80%,
+an improvement of 40 percentage points.
+
+## Temperature Analysis
+At temperature 1.0, two runs produced different pass
+rates of 90% and 70%, demonstrating response variability.
+
+These are observed results from the initial experiments.
+Results may vary in subsequent executions.
+
+## Agent or Not
+
+| Business Task | Classification |
+|---------------|----------------|
+| Calculate travel package cost | Plain Code |
+| Answer customer questions | One LLM Call |
+| Dynamically plan a personalized trip | Agent |
+
+## Files
+- task.py - Python implementation
+- tests.csv - Customer questions and expected keywords
+- README.md - Project documentation
+
+## How to Run
+
+1. Install the required library:
+
+   pip install langchain-groq
+
+2. Run the Python script:
+
+   python task.py
+
+3. Enter your Groq API key when prompted, if not configured.
+
+## Conclusion
+This experiment demonstrates how prompt engineering,
+automated testing, and temperature settings influence
+LLM responses.
+
+Keyword-based evaluation does not guarantee complete
+answer correctness. Agent classification is conceptual;
+a tool-calling agent is not implemented in this task.
